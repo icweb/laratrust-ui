@@ -2,7 +2,7 @@
 
 Route::group(['middleware' => ['web', 'auth']], function () {
 
-    Route::get('trust', 'TrustyController@index');
+    Route::get('trust', 'Icweb\Trusty\App\Http\Controllers\TrustyController@index')->name('trust.index');
 
     Route::group(['prefix' => 'trust'], function(){
 
