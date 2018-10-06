@@ -42,13 +42,13 @@ class UsersController extends Controller
      */
     public function store(CreatesUsersRequest $request)
     {
-        $user = new App\User();
+        $user = new User();
         $user->name = $request->input('name');
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
         $user->save();
 
-        return redirect()->route('trusty::users.show', $user);
+        return redirect()->route('users.show', $user);
     }
 
     /**
