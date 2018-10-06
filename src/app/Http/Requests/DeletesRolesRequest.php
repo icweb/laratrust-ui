@@ -1,6 +1,6 @@
 <?php
 
-namespace ICWEB\Trusty\App\Http\Requests;
+namespace Icweb\Trusty\App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;

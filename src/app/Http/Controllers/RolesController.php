@@ -1,11 +1,11 @@
 <?php
 
-namespace ICWEB\Trusty\App\Http\Controllers;
+namespace Icweb\Trusty\App\Http\Controllers;
 
 Use App\Http\Controllers\Controller;
-use ICWEB\Trusty\App\Http\Requests\CreatesRolesRequest;
-use ICWEB\Trusty\App\Http\Requests\DeletesRolesRequest;
-use ICWEB\Trusty\App\Http\Requests\EditsRolesRequest;
+use Icweb\Trusty\App\Http\Requests\CreatesRolesRequest;
+use Icweb\Trusty\App\Http\Requests\DeletesRolesRequest;
+use Icweb\Trusty\App\Http\Requests\EditsRolesRequest;
 use App\Permission;
 use App\Role;
 use Illuminate\Support\Facades\DB;

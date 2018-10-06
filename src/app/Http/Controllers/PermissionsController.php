@@ -1,11 +1,11 @@
 <?php
 
-namespace ICWEB\Trusty\App\Http\Controllers;
+namespace Icweb\Trusty\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use ICWEB\Trusty\App\Http\Requests\CreatesPermissionsRequest;
-use ICWEB\Trusty\App\Http\Requests\DeletesPermissionsRequest;
-use ICWEB\Trusty\App\Http\Requests\EditsPermissionsRequest;
+use Icweb\Trusty\App\Http\Requests\CreatesPermissionsRequest;
+use Icweb\Trusty\App\Http\Requests\DeletesPermissionsRequest;
+use Icweb\Trusty\App\Http\Requests\EditsPermissionsRequest;
 use App\Permission;
 
 class PermissionsController extends Controller
