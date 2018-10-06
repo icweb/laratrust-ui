@@ -1,11 +1,11 @@
 <?php
 
-namespace IcWeb\TrustUi\App\Http\Controllers;
+namespace ICWEB\Trusty\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use IcWeb\TrustUi\App\Http\Requests\CreatesPermissionsRequest;
-use IcWeb\TrustUi\App\Http\Requests\DeletesPermissionsRequest;
-use IcWeb\TrustUi\App\Http\Requests\EditsPermissionsRequest;
+use ICWEB\Trusty\App\Http\Requests\CreatesPermissionsRequest;
+use ICWEB\Trusty\App\Http\Requests\DeletesPermissionsRequest;
+use ICWEB\Trusty\App\Http\Requests\EditsPermissionsRequest;
 use App\Permission;
 
 class PermissionsController extends Controller
@@ -17,7 +17,7 @@ class PermissionsController extends Controller
      */
     public function index()
     {
-        return view('trustui::permissions.index')
+        return view('trusty::permissions.index')
             ->with(compact(['permissions' => Permission::all()]));
     }
 
@@ -28,7 +28,7 @@ class PermissionsController extends Controller
      */
     public function create()
     {
-        return view('trustui::permissions.create');
+        return view('trusty::permissions.create');
     }
 
     /**
@@ -54,7 +54,7 @@ class PermissionsController extends Controller
      */
     public function show(Permission $permission)
     {
-        return view('trustui::permissions.show', [
+        return view('trusty::permissions.show', [
             'permission' => $permission
         ]);
     }
@@ -67,7 +67,7 @@ class PermissionsController extends Controller
      */
     public function edit(Permission $permission)
     {
-        return view('trustui::permissions.edit', [
+        return view('trusty::permissions.edit', [
             'permission' => $permission
         ]);
     }

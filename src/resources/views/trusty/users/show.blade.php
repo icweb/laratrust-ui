@@ -1,15 +1,15 @@
-@extends('trustui::layouts.app')
+@extends('trusty::layouts.app')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="text-right">
-                    <form action="{{ route('roles.destroy', $role) }}" method="POST">
+                    <form action="{{ route('users.destroy', $user) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <a href="{{ route('roles.edit', $role) }}" class="btn btn-primary"><em class="fa fa-pencil"></em> Edit</a>
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this role? You will not be able to recover this data.');"><em class="fa fa-trash-o"></em> Delete</button>
+                        <a href="{{ route('users.edit', $user) }}" class="btn btn-primary"><em class="fa fa-pencil"></em> Edit</a>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user? You will not be able to recover this data.');"><em class="fa fa-trash-o"></em> Delete</button>
                     </form>
                 </div>
                 <br>
@@ -17,20 +17,17 @@
                     <div class="card-header">Details</div>
 
                     <div class="card-body">
-                        <b>Name: </b> {{ $role->name }}<br>
-                        <b>Display Name: </b> {{ $role->display_name }}<br>
-                        <b>Description: </b> {{ $role->description }}<br>
-                        <br>
-                        <b>Created At: </b> {{ $role->created_at->format('m/d/Y') }}<br>
-                        <b>Updated At: </b> {{ $role->updated_at->format('m/d/Y') }}<br>
+                        <b>Full Name: </b> {{ $user->name }}<br>
+                        <b>Email: </b> {{ $user->email }} {!! isset($user->email_verified_at) ? '<span class="badge badge-pill badge-success"><em class="fa fa-check"></em> Verified</span>' : '' !!}
+                        <br><br>
+                        <b>Created At: </b> {{ $user->created_at->format('m/d/Y') }}<br>
+                        <b>Updated At: </b> {{ $user->updated_at->format('m/d/Y') }}<br>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">Permissions</div>
-
+                    <div class="card-header">Roles</div>
                     <div class="card-body">
-
-                        <table class="table" id="permissions-table">
+                        <table class="table" id="roles-table">
                             <thead>
                             <tr>
                                 <th></th>
@@ -40,13 +37,13 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($permissions as $item)
+                            @foreach($roles as $item)
                                 <tr>
                                     <td>
                                         <span style="display:none">
-                                            {!! in_array($item->id, $permission_ids) ? '1' : '0' !!}
+                                            {!! in_array($item->id, $role_ids) ? '1' : '0' !!}
                                         </span>
-                                        {!! in_array($item->id, $permission_ids) ? '<em class="fa fa-check text-success"></em>' : '<em class="fa fa-times text-danger"></em>' !!}
+                                        {!! in_array($item->id, $role_ids) ? '<em class="fa fa-check text-success"></em>' : '<em class="fa fa-times text-danger"></em>' !!}
                                     </td>
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->display_name }}</td>
@@ -55,7 +52,6 @@
                             @endforeach
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
@@ -66,7 +62,7 @@
 @section('footer')
     <script type="text/javascript">
 
-        $('#permissions-table').dataTable();
+        $('#roles-table').dataTable();
 
     </script>
 @endsection

@@ -1,11 +1,11 @@
 <?php
 
-namespace IcWeb\TrustUi\App\Http\Controllers;
+namespace ICWEB\Trusty\App\Http\Controllers;
 
 Use App\Http\Controllers\Controller;
-use IcWeb\TrustUi\App\Http\Requests\CreatesRolesRequest;
-use IcWeb\TrustUi\App\Http\Requests\DeletesRolesRequest;
-use IcWeb\TrustUi\App\Http\Requests\EditsRolesRequest;
+use ICWEB\Trusty\App\Http\Requests\CreatesRolesRequest;
+use ICWEB\Trusty\App\Http\Requests\DeletesRolesRequest;
+use ICWEB\Trusty\App\Http\Requests\EditsRolesRequest;
 use App\Permission;
 use App\Role;
 use Illuminate\Support\Facades\DB;
@@ -19,7 +19,7 @@ class RolesController extends Controller
      */
     public function index()
     {
-        return view('trustui::roles.index', [
+        return view('trusty::roles.index', [
             'roles' => Role::all()
         ]);
     }
@@ -31,7 +31,7 @@ class RolesController extends Controller
      */
     public function create()
     {
-        return view('trustui::roles.create');
+        return view('trusty::roles.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class RolesController extends Controller
         $permission_ids = DB::table('permission_role')->select('permission_id')->where(['role_id' => $role->id])->get()->pluck('permission_id')->toArray();
         $permissions = Permission::all();
 
-        return view('trustui::roles.show', [
+        return view('trusty::roles.show', [
             'role'              => $role,
             'permissions'       => $permissions,
             'permission_ids'    => $permission_ids,
@@ -78,7 +78,7 @@ class RolesController extends Controller
         $permission_ids = DB::table('permission_role')->select('permission_id')->where(['role_id' => $role->id])->get()->pluck('permission_id')->toArray();
         $permissions = Permission::all();
 
-        return view('trustui::roles.edit', [
+        return view('trusty::roles.edit', [
             'role'              => $role,
             'permissions'       => $permissions,
             'permission_ids'    => $permission_ids,

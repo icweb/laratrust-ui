@@ -1,4 +1,4 @@
-@extends('trustui::layouts.app')
+@extends('trusty::layouts.app')
 
 @section('content')
     <form action="{{ route('permissions.update', $permission) }}" method="POST">

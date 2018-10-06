@@ -1,10 +1,10 @@
 <?php
 
-namespace IcWeb\TrustUi\App\Providers;
+namespace ICWEB\Trusty\App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class TrustUiServiceProvider extends ServiceProvider
+class TrustyServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -15,10 +15,10 @@ class TrustUiServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
 
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views/', 'trustui');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views/', 'trusty');
 
         $this->publishes([
-            __DIR__ . '/../../resources/views/' => resource_path('views/vendor/trustui')
+            __DIR__ . '/../../resources/views/' => resource_path('views/vendor/trusty')
         ]);
 
     }

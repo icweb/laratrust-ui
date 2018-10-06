@@ -1,5 +1,5 @@
 {
-    "name": "icweb/trustui",
+    "name": "icweb/trusty",
     "description": "User interface for Laratrust",
     "type": "laravel",
     "authors": [
@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "IcWeb\\TrustUi\\App\\Providers\\TrustUiServiceProvider"
+                "ICWEB\\Trusty\\App\\Providers\\TrustyServiceProvider"
             ],
             "aliases": {}
         }
