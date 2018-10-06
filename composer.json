@@ -8,6 +8,11 @@
             "email": "ianconway@protonmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Icweb\\Trusty\\": "src/"
+        }
+    },
     "minimum-stability": "dev",
     "require": {
         "php": "^7.1.3",
