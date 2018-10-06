@@ -19,7 +19,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('users.index', [
+        return view('trusty::users.index', [
             'users' => User::all()
         ]);
     }
@@ -31,7 +31,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+        return view('trusty::users.create');
     }
 
     /**
@@ -42,7 +42,7 @@ class UsersController extends Controller
      */
     public function store(CreatesUsersRequest $request)
     {
-        return redirect()->route('users.show', User::create([
+        return redirect()->route('trusty::users.show', User::create([
             'name'      => $request->input('name'),
             'email'     => $request->input('email'),
             'password'  => bcrypt($request->input('password')),
@@ -60,7 +60,7 @@ class UsersController extends Controller
         $roles = Role::all();
         $role_ids = DB::table('role_user')->select('role_id')->where(['user_id' => $user->id])->get()->pluck('role_id')->toArray();
 
-        return view('users.show', [
+        return view('trusty::users.show', [
             'user'      => $user,
             'roles'     => $roles,
             'role_ids'  => $role_ids
@@ -78,7 +78,7 @@ class UsersController extends Controller
         $roles = Role::all();
         $role_ids = DB::table('role_user')->select('role_id')->where(['user_id' => $user->id])->get()->pluck('role_id')->toArray();
 
-        return view('users.edit', [
+        return view('trusty::users.edit', [
             'user'      => $user,
             'roles'     => $roles,
             'role_ids'  => $role_ids
