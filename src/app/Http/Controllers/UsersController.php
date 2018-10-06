@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ICWEB\Trusty\App\Http\Controllers;
 
-use App\Http\Requests\CreatesUsersRequest;
-use App\Http\Requests\DeletesUsersRequest;
-use App\Http\Requests\EditsUsersRequest;
+use App\Http\Controllers\Controller;
+use ICWEB\Trusty\App\Http\Requests\CreatesUsersRequest;
+use ICWEB\Trusty\App\Http\Requests\DeletesUsersRequest;
+use ICWEB\Trusty\App\Http\Requests\EditsUsersRequest;
 use App\Role;
 use App\User;
 use Illuminate\Support\Facades\DB;
