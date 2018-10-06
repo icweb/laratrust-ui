@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "IcWeb\\TrustUi\\App\\Providers\\TrustUiServiceProvider"
+                "app\\Providers\\TrustUiServiceProvider"
             ],
             "aliases": {}
         }
