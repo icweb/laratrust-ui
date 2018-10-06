@@ -1,4 +1,4 @@
-@extends('trusty::layouts.app')
+@extends('trusty::layouts.trusty')
 
 @section('content')
     <form action="{{ route('roles.update', $role) }}" method="POST">

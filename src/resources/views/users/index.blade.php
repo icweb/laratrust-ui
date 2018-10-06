@@ -1,4 +1,4 @@
-@extends('trusty::layouts.app')
+@extends('trusty::layouts.trusty')
 
 @section('content')
     <div class="container">
