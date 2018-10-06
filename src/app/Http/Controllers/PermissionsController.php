@@ -39,11 +39,13 @@ class PermissionsController extends Controller
      */
     public function store(CreatesPermissionsRequest $request)
     {
-        return redirect()->route('permissions.show', Permission::create([
-            'name'          => preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name')),
-            'display_name'  => $request->input('display_name'),
-            'description'   => $request->input('description'),
-        ]));
+        $permission = new App\Permission();
+        $permission->name = preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name'));
+        $permission->display_name = $request->input('display_name');
+        $permission->description = $request->input('description');
+        $permission->save();
+
+        return redirect()->route('permissions.show', $permission);
     }
 
     /**
@@ -81,11 +83,10 @@ class PermissionsController extends Controller
      */
     public function update(EditsPermissionsRequest $request, Permission $permission)
     {
-        $permission->update([
-            'name'          => preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name')),
-            'display_name'  => $request->input('display_name'),
-            'description'   => $request->input('description'),
-        ]);
+        $permission->name = preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name'));
+        $permission->display_name = $request->input('display_name');
+        $permission->description = $request->input('description');
+        $permission->save();
 
         return redirect()->route('permissions.show', $permission);
     }

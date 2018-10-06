@@ -42,11 +42,13 @@ class RolesController extends Controller
      */
     public function store(CreatesRolesRequest $request)
     {
-        return redirect()->route('roles.show', Role::create([
-            'name'          => preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name')),
-            'display_name'  => $request->input('display_name'),
-            'description'   => $request->input('description'),
-        ]));
+        $role = new App\Role();
+        $role->name = preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name'));
+        $role->display_name = $request->input('display_name');
+        $role->description = $request->input('description');
+        $role->save();
+
+        return redirect()->route('roles.show', $role);
     }
 
     /**
@@ -94,11 +96,10 @@ class RolesController extends Controller
      */
     public function update(EditsRolesRequest $request, Role $role)
     {
-        $role->update([
-            'name'          => preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name')),
-            'display_name'  => $request->input('display_name'),
-            'description'   => $request->input('description'),
-        ]);
+        $role->name = preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name'));
+        $role->display_name = $request->input('display_name');
+        $role->description = $request->input('description');
+        $role->save();
 
         DB::table('permission_role')->where(['role_id' => $role->id])->delete();
 

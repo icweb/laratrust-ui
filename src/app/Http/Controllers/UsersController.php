@@ -42,11 +42,13 @@ class UsersController extends Controller
      */
     public function store(CreatesUsersRequest $request)
     {
-        return redirect()->route('trusty::users.show', User::create([
-            'name'      => $request->input('name'),
-            'email'     => $request->input('email'),
-            'password'  => bcrypt($request->input('password')),
-        ]));
+        $user = new App\User();
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
+
+        return redirect()->route('trusty::users.show', $user);
     }
 
     /**
@@ -94,11 +96,10 @@ class UsersController extends Controller
      */
     public function update(EditsUsersRequest $request, User $user)
     {
-        $user->update([
-            'name'      => $request->input('name'),
-            'email'     => $request->input('email'),
-            'password'  => bcrypt($request->input('password')),
-        ]);
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
 
         DB::table('role_user')->where(['user_id' => $user->id])->delete();
 
