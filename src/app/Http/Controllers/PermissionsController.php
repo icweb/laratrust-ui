@@ -17,8 +17,7 @@ class PermissionsController extends Controller
      */
     public function index()
     {
-        return view('trusty::permissions.index')
-            ->with(compact(['permissions' => Permission::all()]));
+        return view('trusty::permissions.index', ['permissions' => Permission::all()]);
     }
 
     /**
