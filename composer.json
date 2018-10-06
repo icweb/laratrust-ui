@@ -1,0 +1,24 @@
+{
+    "name": "icweb/trustui",
+    "description": "User interface for Laratrust",
+    "type": "laravel",
+    "authors": [
+        {
+            "name": "Ian Conway",
+            "email": "ianconway@protonmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1.3",
+        "santigarcor/laratrust": "5.0.*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Icweb\\TrustUi\\App\\Providers\\TrustUiServiceProvider"
+            ],
+            "aliases": {}
+        }
+    }
+}
