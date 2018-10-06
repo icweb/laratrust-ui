@@ -1,6 +1,6 @@
 <?php
 
-namespace ICWEB\Trusty\App\Providers;
+namespace ICWEB\Trusty;
 
 use Illuminate\Support\ServiceProvider;
 
