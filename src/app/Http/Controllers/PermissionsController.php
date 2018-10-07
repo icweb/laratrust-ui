@@ -38,7 +38,7 @@ class PermissionsController extends Controller
      */
     public function store(CreatesPermissionsRequest $request)
     {
-        $permission = new App\Permission();
+        $permission = new Permission();
         $permission->name = preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name'));
         $permission->display_name = $request->input('display_name');
         $permission->description = $request->input('description');

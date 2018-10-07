@@ -42,7 +42,7 @@ class RolesController extends Controller
      */
     public function store(CreatesRolesRequest $request)
     {
-        $role = new App\Role();
+        $role = new Role();
         $role->name = preg_replace('/[^a-zA-Z0-9]/', '', $request->input('name'));
         $role->display_name = $request->input('display_name');
         $role->description = $request->input('description');
