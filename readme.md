@@ -14,9 +14,13 @@ ___
 
 ### Configuration
 
-If you are using Laravel 5.5+, you can skip this step.
+Publish the vendor files by running the `vendor:push` command in your terminal
 
-Add the following provider to your `config\app.php` providers array.
+```
+php artisan vendor:publish --tag="trusty"
+```
+
+If you are using Laravel 5.4 or lower, Add the following provider to your `config\app.php` providers array. Laravel 5.5+ will do this automatically via package discover.
 
 ```php
 Icwebb\Trusty\TrustyServiceProvider::class
