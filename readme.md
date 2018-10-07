@@ -31,7 +31,7 @@ ___
 ### Usage
 
 You can view all routes created by this package by running the `route:list` command in your terminal
-```php
+```
 php artisan rotue:list
 ```
 
