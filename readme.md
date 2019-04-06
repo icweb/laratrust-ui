@@ -14,7 +14,7 @@ ___
 
 ### Configuration
 
-Publish the vendor files by running the `vendor:push` command in your terminal
+Publish the vendor files by running the `vendor:publish` command in your terminal
 
 ```
 php artisan vendor:publish --tag="trusty"
@@ -32,7 +32,7 @@ ___
 
 You can view all routes created by this package by running the `route:list` command in your terminal
 ```
-php artisan rotue:list
+php artisan route:list
 ```
 
 Or you can type in the following URL into your web browser to get started
