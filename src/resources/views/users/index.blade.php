@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-right">
-                    <a href="{{ route('users.create') }}" class="btn btn-primary"><em class="fa fa-plus"></em> New User</a>
+                    <a href="{{ route('trusty.users.create') }}" class="btn btn-primary"><em class="fa fa-plus"></em> New User</a>
                 </div>
                 <br>
                 <div class="card">
@@ -25,7 +25,7 @@
                                 @foreach($users as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td><a href="{{ route('users.show', $item) }}">{{ $item->name }}</a></td>
+                                        <td><a href="{{ route('trusty.users.show', $item) }}">{{ $item->name }}</a></td>
                                         <td>{{ $item->email }}</td>
                                     </tr>
                                 @endforeach

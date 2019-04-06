@@ -10,6 +10,10 @@ Route::group(['middleware' => ['web', 'auth']], function () {
         Route::resource('users', 'Icweb\Trusty\App\Http\Controllers\UsersController', [
             'names' => [
                 'index' => 'trusty.users.index',
+                'show' => 'trusty.users.show',
+                'read' => 'trusty.users.read',
+                'update' => 'trusty.users.update',
+                'create' => 'trusty.users.create',
             ]
         ]);
 

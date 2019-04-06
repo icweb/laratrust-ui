@@ -8,7 +8,7 @@
                     <div class="card-header">Create User Form</div>
 
                     <div class="card-body">
-                        <form action="{{ route('users.store') }}" method="POST">
+                        <form action="{{ route('trusty.users.store') }}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="col-12">
@@ -31,7 +31,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route('trusty.users.index') }}" class="btn btn-secondary">Cancel</a>
                                 <button class="btn btn-primary" type="submit">Submit</button>
                             </div>
                         </form>

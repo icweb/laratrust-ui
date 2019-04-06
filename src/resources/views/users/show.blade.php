@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-right">
-                    <form action="{{ route('users.destroy', $user) }}" method="POST">
+                    <form action="{{ route('trusty.users.destroy', $user) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <a href="{{ route('users.edit', $user) }}" class="btn btn-primary"><em class="fa fa-pencil"></em> Edit</a>
+                        <a href="{{ route('trusty.users.edit', $user) }}" class="btn btn-primary"><em class="fa fa-pencil"></em> Edit</a>
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this user? You will not be able to recover this data.');"><em class="fa fa-trash-o"></em> Delete</button>
                     </form>
                 </div>
