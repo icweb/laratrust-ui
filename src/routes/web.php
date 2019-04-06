@@ -7,7 +7,11 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     Route::group(['prefix' => 'trust'], function(){
 
         Route::model('users', App\User::class);
-        Route::resource('users', 'Icweb\Trusty\App\Http\Controllers\UsersController');
+        Route::resource('users', 'Icweb\Trusty\App\Http\Controllers\UsersController', [
+            'names' => [
+                'index' => 'trusty.users.index',
+            ]
+        ]);
 
         Route::model('roles', App\Role::class);
         Route::resource('roles', 'Icweb\Trusty\App\Http\Controllers\RolesController');
