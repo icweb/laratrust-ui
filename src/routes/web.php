@@ -15,6 +15,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
                 'update' => 'trusty.users.update',
                 'create' => 'trusty.users.create',
                 'destroy' => 'trusty.users.destroy',
+                'edit' => 'trusty.users.edit',
             ]
         ]);
 
