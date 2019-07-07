@@ -1,7 +1,7 @@
 @extends('trusty::layouts.trusty')
 
 @section('content')
-    <form action="{{ route('roles.update', $role) }}" method="POST">
+    <form action="{{ route('trusty.roles.update', $role) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -50,7 +50,7 @@
                         </table>
                     </div>
                     <div class="text-right">
-                        <a href="{{ route('roles.show', $role) }}" class="btn btn-secondary"><em class="fa fa-times"></em> Cancel</a>
+                        <a href="{{ route('trusty.roles.show', $role) }}" class="btn btn-secondary"><em class="fa fa-times"></em> Cancel</a>
                         <button class="btn btn-primary" type="submit"><em class="fa fa-save"></em> Save</button>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 @extends('trusty::layouts.trusty')
 
 @section('content')
-    <form action="{{ route('permissions.update', $permission) }}" method="POST">
+    <form action="{{ route('trusty.permissions.update', $permission) }}" method="POST">
         @csrf
         @method('PUT')
 
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                     <div class="text-right">
-                        <a href="{{ route('permissions.show', $permission) }}" class="btn btn-secondary"><em class="fa fa-times"></em> Cancel</a>
+                        <a href="{{ route('trusty.permissions.show', $permission) }}" class="btn btn-secondary"><em class="fa fa-times"></em> Cancel</a>
                         <button class="btn btn-primary" type="submit"><em class="fa fa-save"></em> Save</button>
                     </div>
                 </div>
