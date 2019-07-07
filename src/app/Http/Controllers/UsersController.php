@@ -48,7 +48,7 @@ class UsersController extends Controller
         $user->password = bcrypt($request->input('password'));
         $user->save();
 
-        return redirect()->route('users.show', $user);
+        return redirect()->route('trusty.users.show', $user);
     }
 
     /**
@@ -117,7 +117,7 @@ class UsersController extends Controller
             }
         }
 
-        return redirect()->route('users.show', $user);
+        return redirect()->route('trusty.users.show', $user);
     }
 
     /**
@@ -131,6 +131,6 @@ class UsersController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('users.index');
+        return redirect()->route('trusty.users.index');
     }
 }
