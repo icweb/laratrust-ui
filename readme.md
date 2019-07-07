@@ -4,6 +4,7 @@ This package provides a user interface for the [santigarcor/laratrust](https://g
 ___
 
 ### Table of Contents
+- [Demo](#Demo) 
 - [Requirements](#Requirements) 
 - [Installation](#Installation)  
 - [Configuration](#Configuration)  
