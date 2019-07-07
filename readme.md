@@ -8,7 +8,8 @@ ___
 - [Installation](#Installation)  
 - [Configuration](#Configuration)  
 - [Usage](#Usage)  
-- [Route Middleware](#RouteMiddleware)  
+- [Route Middleware](#RouteMiddleware) 
+- [Screenshots](#Screenshots)   
 - [TODO](#TODO)  
 
 ___
@@ -127,6 +128,30 @@ This package allows you to customize the middleware groups that are applied to t
 ```php
 'middleware' => ['web', 'auth'],
 ```
+___
+
+<a name="Screenshots"/>
+
+### Screenshots
+
+Users Index:
+![screely-1562522993648](https://user-images.githubusercontent.com/43120665/60772201-13a19680-a0c1-11e9-8e2b-e6b417baef98.png)
+
+User Show:
+![screely-1562523001593](https://user-images.githubusercontent.com/43120665/60772202-13a19680-a0c1-11e9-9108-5c41ae09cd40.png)
+
+User Edit:
+![screely-1562523018730](https://user-images.githubusercontent.com/43120665/60772203-143a2d00-a0c1-11e9-96fe-1b344d0f4810.png)
+
+Roles Index:
+![screely-1562523028116](https://user-images.githubusercontent.com/43120665/60772204-143a2d00-a0c1-11e9-99c9-615778564a3e.png)
+
+Role Show:
+![screely-1562523045843](https://user-images.githubusercontent.com/43120665/60772205-143a2d00-a0c1-11e9-8ce3-f9dfa2226bbe.png)
+
+Permissions Index:
+![screely-1562523060466](https://user-images.githubusercontent.com/43120665/60772206-143a2d00-a0c1-11e9-8fcc-9801774554ec.png)
+
 ___
 
 <a name="TODO"/>
