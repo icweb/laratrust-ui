@@ -42,5 +42,3 @@ http://127.0.0.1:8000/trust
 ___
 
 ### TODO
-
-[ ] Add page for managing users
