@@ -15,7 +15,7 @@
     },
     "require": {
         "php": "^7.1.3",
-        "santigarcor/laratrust": "5.0.*"
+        "santigarcor/laratrust": "5.2.*"
     },
     "extra": {
         "laravel": {
