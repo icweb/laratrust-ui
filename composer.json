@@ -13,7 +13,6 @@
             "Icweb\\Trusty\\": "src/"
         }
     },
-    "minimum-stability": "dev",
     "require": {
         "php": "^7.1.3",
         "santigarcor/laratrust": "5.0.*"
