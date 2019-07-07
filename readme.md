@@ -37,6 +37,12 @@ ___
 
 ### Configuration
 
+If you are using Laravel 5.4 or lower, add the following provider to your `config\app.php` providers array. Laravel 5.5+ will do this automatically via package discover.
+
+```php
+Icwebb\Trusty\App\Providers\TrustyServiceProvider::class
+```
+
 Publish the vendor files by running the `vendor:publish` command in your terminal
 
 ```
@@ -67,12 +73,6 @@ The following files will be published:
         - edit.blade.php
         - index.blade.php
         - show.blade.php
-```
-
-If you are using Laravel 5.4 or lower, add the following provider to your `config\app.php` providers array. Laravel 5.5+ will do this automatically via package discover.
-
-```php
-Icwebb\Trusty\App\Providers\TrustyServiceProvider::class
 ```
 ___
 
