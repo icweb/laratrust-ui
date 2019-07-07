@@ -14,6 +14,19 @@ ___
 
 ___
 
+<a name="Demo"/>
+
+### Demo
+
+A demo for this package is available below. Please note certain features are disabled on the demo, such as editing and deleting users. The demo database is reset every night at 12:00 AM EST.
+
+__Demo URL:__ [http://trusty-demo.icwebapps.com](http://trusty-demo.icwebapps.com)
+
+__Demo Username:__ user@example.com
+
+__Demo Password:__ password
+___
+
 <a name="Requirements"/>
 
 ### Requirements
