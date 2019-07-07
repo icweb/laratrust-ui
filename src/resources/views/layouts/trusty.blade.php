@@ -21,135 +21,7 @@
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-        body
-        {
-            background-color: #ebebeb !important;
-            color: #424c54 !important;
-            font-family:Nunito, sans-serif !important;
-        }
-
-        .card
-        {
-            background-color: #fafafa;
-            border: 0 solid rgba(0,0,0,.125);
-            border-radius: .35rem !important;
-            -webkit-box-shadow: 0 2px 3px rgba(0,0,0,.16);
-            box-shadow: 0 2px 3px rgba(0,0,0,.16);
-            margin-bottom: 20px;
-        }
-
-        .card-header
-        {
-            font-weight: bold;
-        }
-
-        .jumbotron
-        {
-            background: transparent;
-            padding: 2rem 2rem 1rem 2rem !important;
-        }
-
-        .list-group-item,
-        .list-group
-        {
-            border-radius: 0 !important;
-        }
-
-        .table
-        {
-            margin-bottom: 0 !important;
-            border-radius: .35rem;
-        }
-
-        .table tr:first-child td
-        {
-            border-top: 0;
-        }
-
-        .no-mb
-        {
-            margin-bottom: 0 !important;
-        }
-
-
-        .edit-cell
-        {
-            display: none;
-        }
-
-        .tbl-padding td
-        {
-            padding: 0 3px 0 0 !important;
-        }
-
-        .tbl-padding td:last-child
-        {
-            padding-right: 0 !important;
-        }
-
-        .full-width
-        {
-            width: 100%;
-        }
-
-        #save-demographics-button-group
-        {
-            display: none;
-        }
-
-        .btn
-        {
-            border-radius: 50px!important;
-            padding: 10px 35px !important;
-        }
-
-        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-            color: #007bff !important;;
-            background-color: #fff !important;
-            border: 1px solid #007bff !important;
-        }
-
-        .modal-content
-        {
-            border-top: 4px solid #007bff !important;
-        }
-
-        [data-expired="1"]
-        {
-            display:none;
-        }
-
-        .modal-full {
-            min-width: 80%;
-            margin: 0;
-        }
-
-        .modal-full .modal-content {
-            min-height: 100vh;
-        }
-
-        .permission-col
-        {
-            margin-bottom:20px;
-        }
-
-        .permission-name
-        {
-            font-size: 14px;
-            font-weight: bold;
-            width: 105px;
-            vertical-align: middle;
-        }
-
-        .permission-col .small
-        {
-            vertical-align: middle;
-        }
-
-        .client-nav .nav-link
-        {
-            font-size: 13px !important;
-        }
+        body{background-color:#ebebeb!important;color:#424c54!important;font-family:Nunito,sans-serif!important}.card{background-color:#fafafa;border:0 solid rgba(0,0,0,.125);border-radius:.35rem!important;-webkit-box-shadow:0 2px 3px rgba(0,0,0,.16);box-shadow:0 2px 3px rgba(0,0,0,.16);margin-bottom:20px}.card-header{font-weight:700}.jumbotron{background:0 0;padding:2rem 2rem 1rem 2rem!important}.list-group,.list-group-item{border-radius:0!important}.table{margin-bottom:0!important;border-radius:.35rem}.table tr:first-child td{border-top:0}.no-mb{margin-bottom:0!important}.edit-cell{display:none}.tbl-padding td{padding:0 3px 0 0!important}.tbl-padding td:last-child{padding-right:0!important}.full-width{width:100%}#save-demographics-button-group{display:none}.btn{border-radius:50px!important;padding:10px 35px!important}.nav-pills .nav-link.active,.nav-pills .show>.nav-link{color:#007bff!important;background-color:#fff!important;border:1px solid #007bff!important}.modal-content{border-top:4px solid #007bff!important}[data-expired="1"]{display:none}.modal-full{min-width:80%;margin:0}.modal-full .modal-content{min-height:100vh}.permission-col{margin-bottom:20px}.permission-name{font-size:14px;font-weight:700;width:105px;vertical-align:middle}.permission-col .small{vertical-align:middle}.client-nav .nav-link{font-size:13px!important}
     </style>
 </head>
 <body>
@@ -167,7 +39,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         @if(auth()->check())
-                            <li class="nav-item"><a class="nav-link" href="{{ route('trusty.index') }}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('trusty.users.index') }}">Users</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('trusty.roles.index') }}">Roles</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('trusty.permissions.index') }}">Permissions</a></li>
