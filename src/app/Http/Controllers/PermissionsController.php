@@ -44,7 +44,7 @@ class PermissionsController extends Controller
         $permission->description = $request->input('description');
         $permission->save();
 
-        return redirect()->route('permissions.show', $permission);
+        return redirect()->route('trusty.permissions.show', $permission);
     }
 
     /**
@@ -87,7 +87,7 @@ class PermissionsController extends Controller
         $permission->description = $request->input('description');
         $permission->save();
 
-        return redirect()->route('permissions.show', $permission);
+        return redirect()->route('trusty.permissions.show', $permission);
     }
 
     /**
@@ -101,6 +101,6 @@ class PermissionsController extends Controller
     {
         $permission->delete();
 
-        return redirect()->route('permissions.index');
+        return redirect()->route('trusty.permissions.index');
     }
 }

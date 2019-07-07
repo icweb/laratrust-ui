@@ -48,7 +48,7 @@ class RolesController extends Controller
         $role->description = $request->input('description');
         $role->save();
 
-        return redirect()->route('roles.show', $role);
+        return redirect()->route('trusty.roles.show', $role);
     }
 
     /**
@@ -117,7 +117,7 @@ class RolesController extends Controller
             }
         }
 
-        return redirect()->route('roles.show', $role);
+        return redirect()->route('trusty.roles.show', $role);
     }
 
     /**
@@ -131,6 +131,6 @@ class RolesController extends Controller
     {
         $role->delete();
 
-        return redirect()->route('roles.index');
+        return redirect()->route('trusty.roles.index');
     }
 }
