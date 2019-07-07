@@ -44,5 +44,3 @@ ___
 ### TODO
 
 [ ] Add page for managing users
-
-[ ] BUG: Laratrust is a required dependency, but allows you to install without it

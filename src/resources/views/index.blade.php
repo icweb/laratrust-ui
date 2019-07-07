@@ -8,7 +8,7 @@
                     <div class="card-header">Dashboard</div>
                     <div class="card-body">
                         <ul>
-                            <li><a href="{{ route('users.index') }}">Users</a></li>
+                            <li><a href="{{ route('trusty.users.index') }}">Users</a></li>
                             <li><a href="{{ route('roles.index') }}">Roles</a></li>
                             <li><a href="{{ route('permissions.index') }}">Permissions</a></li>
                         </ul>
