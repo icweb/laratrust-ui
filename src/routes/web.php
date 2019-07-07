@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['middleware' => ['web', 'auth']], function () {
+Route::group(['middleware' => config('trusty.middleware')], function () {
 
     Route::get('trust', 'Icweb\Trusty\App\Http\Controllers\TrustyController@index')->name('trusty.index');
 

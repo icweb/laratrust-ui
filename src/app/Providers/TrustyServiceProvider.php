@@ -18,7 +18,8 @@ class TrustyServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/resources/views/', 'trusty');
 
         $this->publishes([
-            __DIR__ . '/resources/views/' => resource_path('views/vendor/trusty')
+            __DIR__ . '/resources/views/' => resource_path('views/vendor/trusty'),
+            __DIR__ . '../../config/trusty.php' => config_path('trusty.php'),
         ], 'trusty');
 
     }
