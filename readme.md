@@ -39,3 +39,9 @@ Or you can type in the following URL into your web browser to get started
 ```
 http://127.0.0.1:8000/trust
 ```
+___
+
+### TODO
+
+[ ] Add page for managing users
+[ ] BUG: Laratrust is a required dependency, but allows you to install without it
