@@ -19,7 +19,7 @@ ___
 
 ### Demo
 
-A demo for this package is available below. Please note certain features are disabled on the demo, such as editing and deleting users. The demo database is reset every night at 12:00 AM EST.
+A demo for this package is available below. Please note certain features are disabled on the demo, such as editing and deleting users. The demo database is reset every hour.
 
 __Demo URL:__ [http://trusty-demo.icwebapps.com](http://trusty-demo.icwebapps.com)
 
