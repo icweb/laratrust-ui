@@ -156,8 +156,8 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('trust.index') }}">
-                    {{ config('app.name', 'Laravel') }}
+                <a class="navbar-brand" href="{{ route('trusty.index') }}">
+                    {{ config('app.name', 'Trusty') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -167,10 +167,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         @if(auth()->check())
-                            <li class="nav-item"><a class="nav-link" href="{{ route('trust.index') }}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('trusty.index') }}">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('trusty.users.index') }}">Users</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('roles.index') }}">Roles</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('permissions.index') }}">Permissions</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('trusty.roles.index') }}">Roles</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('trusty.permissions.index') }}">Permissions</a></li>
                         @endif
                     </ul>
 

@@ -8,7 +8,7 @@
                     <div class="card-header">Create Role Form</div>
 
                     <div class="card-body">
-                        <form action="{{ route('roles.store') }}" method="POST">
+                        <form action="{{ route('trusty.roles.store') }}" method="POST">
                             @csrf
                             <div class="form-row">
                                 <div class="col-12">
@@ -27,7 +27,7 @@
                                 </div>
                             </div>
                             <div class="text-right">
-                                <a href="{{ route('roles.index') }}" class="btn btn-secondary">Cancel</a>
+                                <a href="{{ route('trusty.roles.index') }}" class="btn btn-secondary">Cancel</a>
                                 <button class="btn btn-primary" type="submit">Submit</button>
                             </div>
                         </form>

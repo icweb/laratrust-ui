@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-right">
-                    <a href="{{ route('permissions.create') }}" class="btn btn-primary"><em class="fa fa-plus"></em> New Permission</a>
+                    <a href="{{ route('trusty.permissions.create') }}" class="btn btn-primary"><em class="fa fa-plus"></em> New Permission</a>
                 </div>
                 <br>
                 <div class="card">
@@ -26,7 +26,7 @@
                                 @foreach($permissions as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td><a href="{{ route('permissions.show', $item) }}">{{ $item->name }}</a></td>
+                                        <td><a href="{{ route('trusty.permissions.show', $item) }}">{{ $item->name }}</a></td>
                                         <td>{{ $item->display_name }}</td>
                                         <td>{{ $item->description }}</td>
                                     </tr>

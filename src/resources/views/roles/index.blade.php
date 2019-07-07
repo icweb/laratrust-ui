@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-right">
-                    <a href="{{ route('roles.create') }}" class="btn btn-primary"><em class="fa fa-plus"></em> New Role</a>
+                    <a href="{{ route('trusty.roles.create') }}" class="btn btn-primary"><em class="fa fa-plus"></em> New Role</a>
                 </div>
                 <br>
                 <div class="card">
@@ -26,7 +26,7 @@
                                 @foreach($roles as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td><a href="{{ route('roles.show', $item) }}">{{ $item->name }}</a></td>
+                                        <td><a href="{{ route('trusty.roles.show', $item) }}">{{ $item->name }}</a></td>
                                         <td>{{ $item->display_name }}</td>
                                         <td>{{ $item->description }}</td>
                                     </tr>

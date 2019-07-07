@@ -5,10 +5,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-right">
-                    <form action="{{ route('permissions.destroy', $permission) }}" method="POST">
+                    <form action="{{ route('trusty.permissions.destroy', $permission) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <a href="{{ route('permissions.edit', $permission) }}" class="btn btn-primary"><em class="fa fa-pencil"></em> Edit</a>
+                        <a href="{{ route('trusty.permissions.edit', $permission) }}" class="btn btn-primary"><em class="fa fa-pencil"></em> Edit</a>
                         <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this permission? You will not be able to recover this data.');"><em class="fa fa-trash-o"></em> Delete</button>
                     </form>
                 </div>
