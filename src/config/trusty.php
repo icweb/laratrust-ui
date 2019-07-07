@@ -15,4 +15,18 @@ return [
 
     'middleware' => ['web', 'auth'],
 
+
+    /*
+    |--------------------------------------------------------------------------
+    | ** DO NOT CHANGE **
+    | Demo Mode
+    |--------------------------------------------------------------------------
+    |
+    | This setting should be left to the default unless explicitly
+    | instructed otherwise
+    |
+    */
+
+    'demo' => false,
+
 ];

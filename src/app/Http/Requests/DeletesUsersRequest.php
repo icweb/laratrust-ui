@@ -16,7 +16,7 @@ class DeletesUsersRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return !config('trusty.demo');
     }
 
     /**
