@@ -5,7 +5,7 @@
     "authors": [
         {
             "name": "Ian Conway",
-            "email": "iaay@protonmail.com"
+            "email": "laratrust-ui@iacwb.com"
         }
     ],
     "autoload": {
@@ -14,8 +14,8 @@
         }
     },
     "require": {
-        "php": "^7.1.3",
-        "santigarcor/laratrust": "5.2.*"
+        "php": "^8.0.2",
+        "santigarcor/laratrust": "^7.1"
     },
     "extra": {
         "laravel": {
